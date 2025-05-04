@@ -17,12 +17,15 @@ from config import *
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(dotenv_path=dotenv_path, override=True)
 
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+logger.info(f"NUM_ITERATIONS: {NUM_ITERATIONS}")
 
 class PerformanceTest:
     def __init__(self):
@@ -166,12 +169,32 @@ class PerformanceTest:
         summary_rows = []
         all_scenario_results = []  # Collect results for all scenarios
         for scenario in TEST_SCENARIOS:
+            # --- Begin dynamic prompt construction ---
+            prompt = scenario['prompt']
+            if '[system_prompt_ask]' in prompt:
+                with open('input/system_prompt_ask.txt', 'r') as f:
+                    system_prompt = f.read().strip()
+                prompt = prompt.replace('[system_prompt_ask]', system_prompt)
+                file_path = scenario.get('file_to_analyze')
+                if file_path:
+                    if not os.path.exists(file_path):
+                        logger.error(f"File to analyze not found: {file_path}. Skipping scenario {scenario['name']}.")
+                        continue  # Skip this scenario
+                    with open(file_path, 'r') as f:
+                        file_content = f.read()
+                    prompt += f"\n\n--- {file_path} ---\n{file_content}\n"
+                scenario = dict(scenario)  # Copy to avoid mutating global config
+                scenario['prompt'] = prompt
+            # --- End dynamic prompt construction ---
             logger.info(f"Running scenario: {scenario['name']}")
+            logger.info(f"Prompt (input) for scenario '{scenario['name']}':\n{scenario['prompt']}")
             all_results = []
             for iteration in range(NUM_ITERATIONS):
                 logger.info(f"Iteration {iteration + 1}/{NUM_ITERATIONS}")
                 # Run concurrent tests
                 results = asyncio.run(self.run_concurrent_tests(scenario))
+                for idx, result in enumerate(results):
+                    logger.info(f"Output (response) for scenario '{scenario['name']}', iteration {iteration + 1}, request {idx + 1}:\n{result.get('response', result)}")
                 all_results.extend(results)
             all_scenario_results.append((scenario['name'], all_results))
             
