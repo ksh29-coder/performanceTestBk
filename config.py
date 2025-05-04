@@ -102,11 +102,65 @@ TEST_SCENARIOS = [
     #     "max_tokens": 2000
     # },
     {
-        "name": "analyze_file_agent_js",
+        "name": "analyze_file_agent_js1",
         "prompt": "[system_prompt_ask] input/src/agent/agent.js",
         "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
         "file_to_analyze": "input/src/agent/agent.js"
     },
+    {
+        "name": "analyze_file_agent_js2",
+        "prompt": "[system_prompt_ask] input/src/agent/coder.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/agent/coder.js"
+    },
+    {
+        "name": "analyze_file_agent_js3",
+        "prompt": "[system_prompt_ask] input/src/agent/conversation.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/agent/conversation.js"
+    },
+    {
+        "name": "analyze_file_agent_js4",
+        "prompt": "[system_prompt_ask] input/src/agent/prompter.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/agent/prompter.js"
+    },
+    {
+        "name": "analyze_file_agent_js5",
+        "prompt": "[system_prompt_ask] input/src/agent/self_prompter.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/agent/self_prompter.js"
+    },
+    {
+        "name": "analyze_file_agent_js6",
+        "prompt": "[system_prompt_ask] input/src/agent/modes.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/agent/modes.js"
+    },
+    {
+        "name": "analyze_file_agent_js7",
+        "prompt": "[system_prompt_ask] input/src/agent/tasks.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/agent/tasks.js"
+    },
+    {
+        "name": "analyze_file_agent_js8",
+        "prompt": "[system_prompt_ask] input/src/process/agent_process.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/process/agent_process.js"
+    },
+    {
+        "name": "analyze_file_agent_js9",
+        "prompt": "[system_prompt_ask] input/src/process/main_process.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/process/main_process.js"
+    },
+    {
+        "name": "analyze_file_agent_js10",
+        "prompt": "[system_prompt_ask] input/src/agent/commands/action_command.js",
+        "description": "Test scenario where the LLM is asked to analyze the agent.js file using the system prompt.",
+        "file_to_analyze": "input/src/agent/commands/action_command.js"
+    }
 ]
 
 # Output Configuration

@@ -196,6 +196,9 @@ class PerformanceTest:
                 for idx, result in enumerate(results):
                     logger.info(f"Output (response) for scenario '{scenario['name']}', iteration {iteration + 1}, request {idx + 1}:\n{result.get('response', result)}")
                 all_results.extend(results)
+                if iteration < NUM_ITERATIONS - 1:
+                    logger.info("Waiting 5 seconds before next iteration to avoid rate limits...")
+                    time.sleep(5)
             all_scenario_results.append((scenario['name'], all_results))
             
             # Analyze and save results
