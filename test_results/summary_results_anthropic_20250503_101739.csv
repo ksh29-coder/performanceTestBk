@@ -1,0 +1,17 @@
+test_name,model,input_tokens,output_tokens,latency,success
+short_response,claude-3-7-sonnet-latest,,,0.562,failed
+medium_response,claude-3-7-sonnet-latest,,,0.868,failed
+long_response,claude-3-7-sonnet-latest,,,0.984,failed
+input_1k_tokens,claude-3-7-sonnet-latest,,,0.861,failed
+input_5k_tokens,claude-3-7-sonnet-latest,,,0.805,failed
+input_10k_tokens,claude-3-7-sonnet-latest,,,0.923,failed
+input_20k_tokens,claude-3-7-sonnet-latest,,,0.957,failed
+input_20_tokens,claude-3-7-sonnet-latest,,,0.785,failed
+output_1k_tokens,claude-3-7-sonnet-latest,,,0.767,failed
+output_5k_tokens,claude-3-7-sonnet-latest,,,0.872,failed
+output_10k_tokens,claude-3-7-sonnet-latest,,,0.903,failed
+output_20k_tokens,claude-3-7-sonnet-latest,,,0.887,failed
+output_20_tokens,claude-3-7-sonnet-latest,,,0.991,failed
+small_input_large_output_500,claude-3-7-sonnet-latest,,,1.048,failed
+small_input_large_output_1000,claude-3-7-sonnet-latest,,,0.967,failed
+small_input_large_output_2000,claude-3-7-sonnet-latest,,,0.834,failed
