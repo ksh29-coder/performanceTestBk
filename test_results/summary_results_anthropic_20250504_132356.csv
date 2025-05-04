@@ -1,0 +1,9 @@
+test_name,model,input_tokens,output_tokens,latency,success,min_duration,max_duration,average_duration,num_runs
+analyze_file_agent_js1,claude-3-7-sonnet-latest,14755,51,3.409,success,3.409,3.409,3.409,1
+analyze_file_agent_js2,claude-3-7-sonnet-latest,11815,634,17.007,success,17.007,17.007,17.007,1
+analyze_file_agent_js3,claude-3-7-sonnet-latest,13390,882,18.386,success,18.386,18.386,18.386,1
+analyze_file_agent_js4,claude-3-7-sonnet-latest,13927,621,55.629,success,55.629,55.629,55.629,1
+analyze_file_agent_js5,claude-3-7-sonnet-latest,11008,680,34.401,success,34.401,34.401,34.401,1
+analyze_file_agent_js6,claude-3-7-sonnet-latest,14518,818,45.323,success,45.323,45.323,45.323,1
+analyze_file_agent_js7,claude-3-7-sonnet-latest,12096,652,35.263,success,35.263,35.263,35.263,1
+analyze_file_agent_js8,claude-3-7-sonnet-latest,10639,688,14.79,success,14.79,14.79,14.79,1

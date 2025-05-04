@@ -1,0 +1,6 @@
+test_name,model,input_tokens,output_tokens,latency,success,min_duration,max_duration,average_duration,num_runs
+analyze_file_agent_js,claude-3-7-sonnet-latest,14755,251,14.938,success,14.938,14.938,14.938,1
+analyze_file_agent_js,claude-3-7-sonnet-latest,11815,183,6.219,success,6.219,6.219,6.219,1
+analyze_file_agent_js,claude-3-7-sonnet-latest,13390,902,27.006,success,27.006,27.006,27.006,1
+analyze_file_agent_js,claude-3-7-sonnet-latest,13927,741,19.193,success,19.193,19.193,19.193,1
+analyze_file_agent_js,claude-3-7-sonnet-latest,11505,269,44.281,success,44.281,44.281,44.281,1

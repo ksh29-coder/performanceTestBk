@@ -1,0 +1,2 @@
+test_name,model,input_tokens,output_tokens,latency,success,min_duration,max_duration,average_duration,num_runs
+analyze_file_agent_js1,claude-3-7-sonnet-latest,14755,819,19.063,success,19.063,19.063,19.063,1
